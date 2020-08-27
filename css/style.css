@@ -1,0 +1,177 @@
+/* general layout */
+* {
+    font-weight: 400;
+   
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+/* HEADER LAYOUT */
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "navigation"
+    "main"
+    ;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+main {
+    grid-area: main;
+}
+
+
+main {
+    display: grid;
+}
+
+
+
+header {
+    display: flex;
+    flex-flow: row;
+    background: #5C5C8B;
+}
+
+header h1 {
+    flex: 2;
+    margin-left: 13px;
+    color: #fff;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.bell-svg {
+    width:20px;
+    margin: 25px auto;
+}
+
+.vertical-line {
+    border-left: 2px solid rgb(54, 54, 54);
+    display: inline-block;
+    height: 50px;
+    margin: 15px 16px;
+}
+
+header .member-img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 16px;
+}
+
+header h3 {
+    color: #fff;
+}
+
+/* navigation layout */
+
+nav {
+    background: #3A4A5A;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.svg-nav {
+    width: 20px;
+    padding: 10px;
+}
+
+/* dashboard layout */
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header-search {
+    margin-top: 22px;
+}
+
+
+
+
+@media (min-width: 1024px) {
+    /* header layout */
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+        "header header"
+        "navigation main"
+        ;
+    }
+
+    .main {
+        grid-template-columns: 50%;
+    }
+    header {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    header h1 {
+        flex: 1;
+    }
+
+    /* navigation layout */
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+
+    /* dashboard */
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-header-search {
+        margin-top: 22px;
+    }
+    /* main layout */
+
+    .main {
+        display: grid;
+        grid-template-columns: 50%;
+    }
+
+    .main-header,
+    .traffic,
+    .social-container {
+        grid-column: 1 / span 2;
+    }
+    /*.daily​, ​.members​, ​.message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile​, ​.activity​, ​.settings {
+        grid-column: 2 / span 1;
+    }*/
+
+}
+
