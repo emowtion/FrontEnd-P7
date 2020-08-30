@@ -72,6 +72,7 @@ const daily = new Chart(dailyChart, {
         }]
     },
     options: {
+        responsive: true,
         scales: {
             yAxes: [{
                 ticks: {
@@ -110,6 +111,7 @@ var mobile = new Chart(mobileChart, {
         }]
     },
     options: {
+        responsive: true,
         scales: {
             yAxes: [{
                 ticks: {
