@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>YourApp</title>
@@ -132,19 +132,22 @@
         <div class="main-header">
             <h2 class="headline">Dashboard</h2>
             <div class="main-header-search">
-                <input type="search" name="search" id="search" placeholder="Search">
+                <input type="search" name="search" id="search" placeholder="Search"><button type="submit"><i class="fas fa-search"></i>
+                </button>
+                
             </div>
         </div>
 
         <!--alert box in js-->
         <div class="alert" id="alert">
-            <!--JS code goes here -->
+            <p><span class="bold">Alert</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium perspiciatiit voluptate oms excepturi voluptatum quis hic.</p>
+            <button id="alert-btn"><i class="fas fa-times"></i></button>
         </div>
         ​
         <!-- line graph charts -->
         <section class="traffic">
             <div class="traffic-header">
-                <h3>Traffic</h3>
+                <h3>TRAFFIC</h3>
                 <ul class="traffic-nav">
                     <li class="traffic-nav-link">Hourly</li>
                     <li class="traffic-nav-link">Daily</li>
@@ -154,9 +157,13 @@
             </div>
             <div class="widget-container-full">
                 <!-- element line graph will attach to -->
+
                 
                 <img src="" alt="">
-                <canvas id="traffic-chart"></canvas>
+                <div class="traffic-chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                
             </div>
         </section>
         <section class="daily">

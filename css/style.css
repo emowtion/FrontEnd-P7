@@ -108,12 +108,90 @@ nav {
 }
 
 .main-header-search {
-    margin-top: 22px;
+    width: 60%;
+    background: rgb(187, 184, 184);;
+    border-radius: 0 0 0 5px;
+}
+
+.main-header-search input {
+    float: right;
+    width: 70%;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px;
+    border:none;
+}
+
+.main-header-search button[type="submit"] {
+    position: absolute;
+    right: 17px;
+    top: 140px;
+    background: white;
+    border: none;
+    z-index: 2;
+    color: rgb(156, 155, 155);
+    cursor: pointer;
+}
+
+/* traffic nav */ 
+.alert {
+    background: #5C5C8B;
+    width: 100%;
+    border-radius: 10px;
+    height: 70px;
+    margin: 20px 0;
+    color: white;
+    position: relative;
+}
+
+.alert p {
+    margin-top: 8px;
+}
+
+#alert-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    color: white;
+    background: #5C5C8B;
+    cursor: pointer;
 }
 
 
+.traffic-nav li {
+    list-style-type: none;
+    padding:10px;
+}
+
+.traffic-nav li:hover {
+    background: rgb(39, 199, 39);
+    border-radius: 22px;
+    color: white;
+}
 
 
+.traffic-nav {
+    text-align: center;
+    padding: 0;
+}
+.traffic-nav-link {
+    display: inline;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* TRAFFIC LINE CHART */
+
+.traffic-chart {
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------- @media queries----------------------------*/
 @media (min-width: 1024px) {
     /* header layout */
     .grid-container {
@@ -123,9 +201,12 @@ nav {
         "navigation main"
         ;
     }
-
-    .main {
+    h3 {
+        text-align: initial;
+    }
+    main {
         grid-template-columns: 50%;
+        margin: 0 0 0 10px;
     }
     header {
         display: flex;
@@ -145,24 +226,47 @@ nav {
     }
 
     /* dashboard */
+
+    .alert {
+        height: 50px;
+    }
     .main-header {
         display: flex;
         justify-content: space-between;
     }
 
     .main-header-search {
-        margin-top: 22px;
+        width: 70%;
+    }
+
+    .main-header-search input {
+        float: right;
+        width: 20%;
+        margin: 15px 0;
+
+    } 
+
+    /* tarffic nav */
+    .traffic-header {
+        display: flex;
+    }
+    
+    .traffic-header h3 {
+        flex-grow: 1;
+        margin-top: 25px;
+    }
+
+    .main-header-search button[type="submit"] {
+        right: -3px;
+        top: 101px;
     }
     /* main layout */
 
-    .main {
-        display: grid;
-        grid-template-columns: 50%;
-    }
 
     .main-header,
     .traffic,
-    .social-container {
+    .social-container,
+    .alert {
         grid-column: 1 / span 2;
     }
     /*.daily​, ​.members​, ​.message {
