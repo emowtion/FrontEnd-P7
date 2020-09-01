@@ -183,11 +183,11 @@ h3 {
     text-align: center;
 }
 
-/* TRAFFIC LINE CHART */
+/*  widget charts  */
 
-.traffic-chart {
-    width: 85%;
-    margin: 0 auto;
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
 }
 
 
@@ -283,6 +283,16 @@ h3 {
     .mobile​, ​.activity​, ​.settings {
         grid-column: 2 / span 1;
     }*/
+
+    /* widget charts */
+
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half {
+        width: 45vw;
+    }
 
     /* social container */
 
