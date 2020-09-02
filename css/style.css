@@ -134,7 +134,7 @@ nav {
 }
 
 /* traffic nav */ 
-.alert {
+.alert-banner {
     background: #5C5C8B;
     width: 100%;
     border-radius: 10px;
@@ -144,7 +144,7 @@ nav {
     position: relative;
 }
 
-.alert p {
+.alert-banner p {
     margin-top: 8px;
 }
 
@@ -190,13 +190,158 @@ h3 {
     width: 95vw;
 }
 
+/* social container */
 
 .social-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 50px;
     
+}
+
+.svg-social-icon {
+    width: 40px;
+}
+
+.social-image {
+    background: #5C5C8B;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.twitter,
+.facebook,
+.google {
+
+    flex: 1 1 0;
+    background: rgb(236, 234, 240);
+    border: 1px solid rgb(231, 226, 236);
+    margin: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.social-text {
+    color: #5C5C8B;
+}
+
+/* members and activity */
+.members-container {
+    position: relative;
+}
+
+.members .members-text > p:nth-child(2){
+    position: absolute;
+    right: 30px;
+    top : -16px;
+}
+.members-container img {
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.members-text a {
+    text-decoration-line: none;
+}
+
+.members,
+.activity {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.fa-greater-than {
+    display: none;
+}
+
+/* message user */
+
+.message,
+.settings {
+    padding: 45px;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#userField {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    background: rgb(236, 234, 240);
+}
+
+#messageField {
+    height: 187px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(236, 234, 240);
+}
+
+#send {
+    margin-top: 13px;
+    height: 35px;
+    border-radius: 5px;
+    background: #5c5c8B;
+    color: white;
+    border: 1px solid rgb(167, 163, 163);
+}
+
+#timezone {
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(236, 234, 240);
+    border: none;
+}
+
+#save {
+    margin-top: 13px;
+    height: 35px;
+    border-radius: 5px;
+    background: #5c5c8B;
+    color: white;
+    border: 1px solid rgb(167, 163, 163);
+    padding: 0 18px;
+}
+#cancel {
+    margin-top: 13px;
+    height: 35px;
+    border-radius: 5px;
+    background: gray;
+    color: white;
+    border: 1px solid rgb(167, 163, 163);
+}
+
+
+.switch-light {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.switch-ios.switch-light > span {
+    width: 86px;
+    margin-left: auto;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+    border-color: #5C5C8B;
+    box-shadow: inset 0 0 0 30px #5C5C8B;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+    border-color: #5C5C8b;
 }
 /* ------------------------------------------------------------- @media queries----------------------------*/
 @media (min-width: 1024px) {
@@ -273,7 +418,7 @@ h3 {
     .main-header,
     .traffic,
     .social-container,
-    .alert {
+    .alert-banner {
         grid-column: 1 / span 2;
     }
     /*.daily​, ​.members​, ​.message {
@@ -302,6 +447,27 @@ h3 {
         justify-content: space-around;
         
     }
+
+    /* members container */
+
+    .fa-greater-than {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: -16px;
+        color: #5C5C8B;
+    }
+    
+    .settings {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .settings-button {
+        margin-top: auto;
+    }
+
+  
 
 }
 
