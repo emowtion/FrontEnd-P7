@@ -297,7 +297,8 @@ h3 {
 
 .message,
 .settings {
-    padding: 45px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .widget-container {
@@ -374,6 +375,22 @@ h3 {
 
 .switch-ios.switch-light input:checked ~ span a {
     border-color: #5C5C8b;
+}
+
+
+/* grey borders around the sections */
+
+
+.traffic,
+.daily,
+.mobile,
+.social-container
+ {
+    border-bottom: none;
+}
+
+.message, .settings {
+    border-top: none;
 }
 /* ------------------------------------------------------------- @media queries----------------------------*/
 @media (min-width: 1024px) {
@@ -453,13 +470,7 @@ h3 {
     #alert {
         grid-column: 1 / span 2;
     }
-    /*.daily​, ​.members​, ​.message {
-        grid-column: 1 / span 1;
-    }
 
-    .mobile​, ​.activity​, ​.settings {
-        grid-column: 2 / span 1;
-    }*/
 
     /* widget charts */
 
@@ -507,7 +518,18 @@ h3 {
         margin-top: auto;
     }
 
-  
+    .traffic,
+    .daily,
+    .mobile,
+    .social-container
+     {
+        border-bottom: 1px solid rgb(228, 221, 221);
+        padding: 0 0 20px;
+    }
+
+
+    
+
 
 }
 
