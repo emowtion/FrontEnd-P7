@@ -62,6 +62,20 @@ header h1 {
 .bell-svg {
     width:20px;
     margin: 25px auto;
+    position: relative;
+    transition: transform .3s;
+}
+.bell-svg:hover {
+    transform: scale(1.7);
+}
+#notifications {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgb(6, 212, 6);
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .vertical-line {
@@ -73,13 +87,16 @@ header h1 {
 
 header .member-img {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     margin-top: 16px;
 }
 
 header h3 {
     color: #fff;
+    margin-left: 11px;
+    margin-top: 26.72px;
+    margin-right: 3px;
 }
 
 /* navigation layout */
@@ -96,7 +113,11 @@ nav {
 
 .svg-nav {
     width: 20px;
-    padding: 10px;
+    padding: 15px;
+}
+
+.svg-nav:hover {
+    border-left: 5px solid rgb(45, 231, 45);
 }
 
 /* dashboard layout */
@@ -125,27 +146,27 @@ nav {
 .main-header-search button[type="submit"] {
     position: absolute;
     right: 17px;
-    top: 140px;
+    top: 147px;
     background: white;
     border: none;
     z-index: 2;
     color: rgb(156, 155, 155);
     cursor: pointer;
 }
+/* alert */
 
-/* traffic nav */ 
 .alert-banner {
     background: #5C5C8B;
     width: 100%;
     border-radius: 10px;
-    height: 70px;
+    height: 50px;
     margin: 20px 0;
     color: white;
     position: relative;
 }
 
 .alert-banner p {
-    margin-top: 8px;
+    position: absolute;
 }
 
 #alert-btn {
@@ -156,9 +177,10 @@ nav {
     color: white;
     background: #5C5C8B;
     cursor: pointer;
+    padding: 15px;
 }
 
-
+/* traffic nav */ 
 .traffic-nav li {
     list-style-type: none;
     padding:10px;
@@ -218,16 +240,21 @@ h3 {
 .facebook,
 .google {
 
-    flex: 1 1 0;
+    width: 30%;
     background: rgb(236, 234, 240);
     border: 1px solid rgb(231, 226, 236);
     margin: 10px;
     border-radius: 5px;
     padding-top: 10px;
 }
-
+.social-text p:last-child{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 .social-text {
     color: #5C5C8B;
+    
 }
 
 /* members and activity */
@@ -251,10 +278,15 @@ h3 {
     text-decoration-line: none;
 }
 
+
 .members,
 .activity {
     width: 90%;
     margin: 0 auto;
+}
+
+.activity .members-text p:nth-child(2) {
+    margin: 0 0;
 }
 
 .fa-greater-than {
@@ -332,7 +364,7 @@ h3 {
 }
 .switch-ios.switch-light > span {
     width: 86px;
-    margin-left: auto;
+    margin-left: auto; 
 }
 
 .switch-ios.switch-light input:checked ~ span {
@@ -418,7 +450,7 @@ h3 {
     .main-header,
     .traffic,
     .social-container,
-    .alert-banner {
+    #alert {
         grid-column: 1 / span 2;
     }
     /*.daily​, ​.members​, ​.message {

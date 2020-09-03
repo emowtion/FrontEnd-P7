@@ -32,13 +32,14 @@
                     </g>
                 </g>
             </svg>
+            <div id="notifications">
+                <!--container element for our notification-->
+            </div>
         </div>
-        <div id="notifications">
-            <!--container element for our notification-->
-        </div>
+        
         <span class="vertical-line"></span>
-        <img class="member-img" src="/images/member-2.jpg" alt="member photo">
-        <h3>Josh Sulivan</h3>
+        <img class="member-img" src="/images/me.jpg" alt="member photo">
+        <h3>Emowtion</h3>
     </header>
 
     <!-- nav section-->
@@ -120,7 +121,7 @@
 			c0.6,0,1-0.4,1-1C27,16.4,26.6,16,26,16z M20,19.4c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4
 			C22.4,18.3,21.3,19.4,20,19.4z M28,0H4C1.8,0,0,1.8,0,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28
 			c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h24c1.1,0,2,0.9,2,2V28z" />
-             s  </g>
+             </g>
             </g>
         </svg>
 
@@ -140,9 +141,8 @@
         </div>
 
         <!--alert box in js-->
-        <div class="alert-banner" id="alert">
-            <p><span class="bold">Alert</span> You have 6 overdue tasks to complete.</p>
-            <button id="alert-btn" class="alert-banner-close"><i class="fas fa-times"></i></button>
+        <div class="alert" id="alert">
+            
         </div>
         ​
         <!-- line graph charts -->
@@ -158,7 +158,7 @@
             </div>
             <div class="widget-container-full">
                 <!-- element line graph will attach to -->
-                    <canvas id="myChart"></canvas>
+                    <canvas id="traffic-chart"></canvas>
             </div>
         </section>
         <section class="daily">
@@ -245,7 +245,6 @@
                     <p>Victoria Chambers</p>
                     <p>10/15/15</p>
                     <a href="mailto:victoria.chambers80@exmaple.com">victoria.chambers80@exmaple.com</a>
-                    
                 </div>
                 
             </div>
@@ -255,7 +254,6 @@
                     <p>Dale Byrd</p>
                     <p>10/15/15</p>
                     <a href="mailto:dale.byrde5280@exmaple.com">dale.byrde5280@exmaple.com</a>
-                    
                 </div>
                 
             </div>
@@ -265,7 +263,6 @@
                     <p>Dawn Wood</p>
                     <p>10/15/15</p>
                     <a href="mailto:dawn.wood16@exmaple.com">dawn.wood16@exmaple.com</a>
-                    
                 </div>
                 
             </div>
@@ -275,9 +272,7 @@
                     <p>Dan Oliver</p>
                     <p>10/15/15</p>
                     <a href="mailto:dan.oliver82@exmaple.com">dan.oliver82@exmaple.com</a>
-                    
                 </div>
-                
             </div>
         </section>
         <!-- recent member section-->
@@ -300,6 +295,7 @@
                         <i class="fas fa-greater-than"></i>
                     </div>
                 </div>
+            </div>
                 <div class="members-container">
                     <img src="/images/member-3.jpg" alt="photo of a member user">
                     <div class="members-text">
@@ -318,8 +314,9 @@
                                 <i class="fas fa-greater-than"></i>
                             </div>
                         </div>
+                    </div>
+                </div>
         </section>
-
         <!--Messaging widget-->
         <section class="message">
             <h3>MESSAGE USER</h3>
@@ -340,16 +337,15 @@
                   <span>On</span>
                   <a></a>
                 </span>
-              </label>
-              <label class="switch-ios switch-light  switch-candy" onclick="">Set Profile to Public
+            </label>
+            <label class="switch-ios switch-light off switch-candy" onclick="">Set Profile to Public
                 <input type="checkbox">
                 <span>
                   <span>Off</span>
                   <span>On</span>
                   <a></a>
                 </span>
-              </label>
-              
+            </label>
             <!-- custom CSS toggle code-->
             <select id="timezone" class="settings-button">
                 <option disabled selected>Select a Timezone</option>

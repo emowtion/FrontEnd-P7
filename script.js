@@ -1,123 +1,169 @@
-var trafficChart = document.getElementById('myChart').getContext('2d');
 
-var traffic = new Chart(trafficChart, {
+const alertBanner = document.getElementById('alert');
+
+alertBanner.innerHTML = `
+        <div class="alert-banner">
+            <p><span class="bold">Alert</span> You have 6 overdue tasks to complete.</p>
+            <button id="alert-btn" class="alert-banner-close"><strong>x</strong></button>
+        </div>
+`
+$(alertBanner).on("click", function(e) {
+    const element = e.target;
     
-    type: 'line',
-    data: {
-        responsive: true,
-        labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26','27-3','4-10'],
+    if ($(element).hasClass('alert-banner-close')) {
+        $(alertBanner).hide();
+    }
+})
+
+
+
+$('.bell-svg').on('click', function() {
+    $(alertBanner).show();
+    
+})
+/* traffic chart code */
+
+let trafficChart = document.getElementById('traffic-chart').getContext('2d');
+let trafficData = {
+    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26','27-3','4-10',"11-17","18-24","25-31"],
         datasets: [{
             label: '',
-            data: [ 500, 
+            data: [ 750, 
+                1250, 
                 1000, 
-                1500, 
                 2000,
-                2500, 
-                2500, 
-                3000,
-                500,
-                1500 ],
+                1500, 
+                1750, 
+                1250,
+                1850,
+                2250,
+                1500,
+                2500
+             ],
             backgroundColor: [
                 'rgba( 128, 86, 212 , 0.2)',
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba( 128, 86, 212 , 0.2)'
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
+};
+let trafficOptions = {
+    aspectRatio: 2.5,
+    animation: {
+        duration: 0
     },
-    options: {
-        responsive: true,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    min: 500,
-                    beginAtZero: true
-                }
-            }]
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero:true
+            }
         }
+
+        ]
+    },
+    legend: {
+        display: false
     }
+};
+
+
+let traffic = new Chart(trafficChart, {
+    
+    type: 'line',
+    data: trafficData,
+    options: trafficOptions
 });
+/*---------------------------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------- daily chart ------------------------------------------------*/
 
 const dailyChart = document.getElementById('daily-chart');
+const dailyData = {
+    labels: ['S', 'M', 'T', 'W', 'T', 'F',"S"],
+        datasets: [{
+            label: '# of Votes',
+            data: [75, 115, 175, 125, 225, 200,100],
+            backgroundColor: '#7477BF',
+            borderWidth: 1
+        }]
+};
+
+const dailyOptions = {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+        display: false
+    }
+}
+
+
 const daily = new Chart(dailyChart, {
     type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+    data: dailyData,
+    options: dailyOptions
+        
+        
 });
 
+/*---------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------Mobile chart------------------------------------------------*/
+
 var mobileChart = document.getElementById('mobile-chart');
-var mobile = new Chart(mobileChart, {
-    type: 'doughnut',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+
+const mobileData = {
+    labels: ['Phones', 'Tablet', 'Desktop'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: '# of Users',
+            data: [500,550,2000],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                '#51B6C8',
+                '#78CF82',
+                '#7477BF',
+                
+                
             ],
             borderWidth: 1
         }]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+};
+
+const mobileOptions = {
+    legend: {
+        position: 'right',
+        labels: {
+            boxWidth: 20,
+            fontStyle: 'bold'
         }
+    }
+}
+
+var mobile = new Chart(mobileChart, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
+});
+
+/* ------------------------Messaging section -----------------------------------------------------*/
+
+const user = document.getElementById('userField');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
+
+$(send).on('click', ()=> {
+    if(user.value === "" && message.value === "") {
+        alert('Please fill out user and message fields before sending');
+    }else if (user.value === "") {
+        alert("Please fill out user field before sending");
+    }else if (message.value === "") {
+        alert('Please fill out message field before sending');
+    }else {
+        alert(`Message successfully sent to : ${user.value}`)
     }
 });
