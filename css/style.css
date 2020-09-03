@@ -479,7 +479,15 @@ h3 {
         justify-content: space-around;
         
     }
-
+    .twitter,
+    .facebook,
+    .google {
+        display: flex;
+    }
+    .social-image,
+    .social-text {
+        margin: auto;
+    }
     /* members container */
 
     .fa-greater-than {
