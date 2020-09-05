@@ -100,7 +100,6 @@ nav {
 
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
 }
 
@@ -114,7 +113,6 @@ nav {
 }
 
 /* dashboard layout */
-
 
 .main-header {
     display: flex;
@@ -185,7 +183,6 @@ nav {
     color: white;
 }
 
-
 .traffic-nav {
     text-align: center;
     padding: 0;
@@ -211,8 +208,6 @@ h3 {
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 50px;
-    
 }
 
 .svg-social-icon {
@@ -232,7 +227,6 @@ h3 {
 .twitter,
 .facebook,
 .google {
-
     width: 30%;
     background: rgb(236, 234, 240);
     border: 1px solid rgb(231, 226, 236);
@@ -247,7 +241,6 @@ h3 {
 }
 .social-text {
     color: #5C5C8B;
-    
 }
 
 /* members and activity */
@@ -271,9 +264,10 @@ h3 {
     text-decoration-line: none;
 }
 
-
 .members,
-.activity {
+.activity,
+.message,
+.settings {
     width: 90%;
     margin: 0 auto;
 }
@@ -287,12 +281,6 @@ h3 {
 }
 
 /* message user */
-
-.message,
-.settings {
-    width: 90%;
-    margin: 0 auto;
-}
 
 .widget-container {
     display: flex;
@@ -336,7 +324,6 @@ h3 {
     display: flex;
   }
 
-
 #save {
     margin-top: 13px;
     height: 35px;
@@ -347,6 +334,7 @@ h3 {
     padding: 0 18px;
     flex-basis: 50%;
 }
+
 #cancel {
     margin-top: 13px;
     height: 35px;
@@ -357,12 +345,12 @@ h3 {
     flex-basis: 50%;
 }
 
-
 .switch-light {
     display: flex;
     flex-direction: row;
     flex: 1;
 }
+
 .switch-ios.switch-light > span {
     width: 86px;
     margin-left: auto; 
@@ -377,17 +365,8 @@ h3 {
     border-color: #5C5C8b;
 }
 
-
 /* grey borders around the sections */
 
-
-.traffic,
-.daily,
-.mobile,
-.social-container
- {
-    border-bottom: none;
-}
 .daily {
     padding: 0 0 27px;
     border-right: 1px solid rgb(228, 221, 221);
@@ -411,10 +390,6 @@ h3 {
     main {
         grid-template-columns: 50%;
         margin: 0 0 0 10px;
-    }
-
-    header h1 {
-        flex: 1;
     }
 
     /* navigation layout */
@@ -487,10 +462,10 @@ h3 {
 
     .social-container {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         
     }
+
     .twitter,
     .facebook,
     .google,
@@ -498,6 +473,7 @@ h3 {
     .members-activity {
         display: flex;
     }
+
     .social-image,
     .social-text {
         margin: auto;
@@ -520,12 +496,10 @@ h3 {
     .settings-button {
         margin-top: auto;
     }
-
+ /* grey borders around the sections */
     .traffic,
     .daily,
-    .mobile,
-    .social-container
-     {
+    .mobile {
         border-bottom: 1px solid rgb(228, 221, 221);
         padding: 0 0 20px;
     }
@@ -534,6 +508,5 @@ h3 {
         border-left: transparent;
         padding: 20px;
     }
-
 }
 
