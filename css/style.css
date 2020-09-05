@@ -6,6 +6,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 
@@ -339,6 +340,11 @@ h3 {
     border: none;
 }
 
+.settings-button {
+    display: flex;
+  }
+
+
 #save {
     margin-top: 13px;
     height: 35px;
@@ -347,6 +353,7 @@ h3 {
     color: white;
     border: 1px solid rgb(167, 163, 163);
     padding: 0 18px;
+    flex-basis: 50%;
 }
 #cancel {
     margin-top: 13px;
@@ -355,6 +362,7 @@ h3 {
     background: gray;
     color: white;
     border: 1px solid rgb(167, 163, 163);
+    flex-basis: 50%;
 }
 
 
@@ -388,12 +396,15 @@ h3 {
  {
     border-bottom: none;
 }
-
+.daily {
+    padding: 0 0 27px;
+    border-right: 1px solid rgb(228, 221, 221);
+}
 .message, .settings {
     border-top: none;
 }
 /* ------------------------------------------------------------- @media queries----------------------------*/
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     /* header layout */
     .grid-container {
         grid-template-columns: 55px 1fr;
