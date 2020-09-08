@@ -4,13 +4,15 @@ const alertBanner = document.getElementById('alert');
 alertBanner.innerHTML = `
         <div class="alert-banner">
             <p><span class="bold">Alert</span> You have 6 overdue tasks to complete.</p>
-            <button id="alert-btn" class="alert-banner-close"><strong>x</strong></button>
+            <button id="alert-btn" class="alert-banner-close"><span class="bold">X</span></button>
         </div>
 `
 $(alertBanner).on("click", function(e) {
     const element = e.target;
-    
-    if ($(element).hasClass('alert-banner-close')) {
+    console.log(element)
+    if ($(element).hasClass('bold')) {
+        $(alertBanner).hide();
+    } else if ($(element).hasClass('alert-banner-close')){
         $(alertBanner).hide();
     }
 })

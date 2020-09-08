@@ -46,15 +46,12 @@ main {
 
 header {
     display: flex;
-    flex-flow: row;
     background: #5C5C8B;
-}
-
-header h1 {
-    flex: 2;
-    margin-left: 13px;
     color: #fff;
 }
+
+
+
 
 .bold {
     font-weight: 800;
@@ -79,6 +76,10 @@ header h1 {
     right: 0;
 }
 
+.profile-info {
+    display: flex;
+    align-items: center;
+}
 .vertical-line {
     border-left: 2px solid rgb(54, 54, 54);
     display: inline-block;
@@ -90,14 +91,9 @@ header .member-img {
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    margin-top: 16px;
-}
-
-header h3 {
-    color: #fff;
-    margin-left: 11px;
-    margin-top: 26.72px;
-    margin-right: 3px;
+    margin-right: 5px;
+   
+    
 }
 
 /* navigation layout */
@@ -115,10 +111,6 @@ nav {
 .svg-nav {
     width: 20px;
     padding: 15px;
-}
-
-.svg-nav:hover {
-    border-left: 5px solid rgb(45, 231, 45);
 }
 
 /* dashboard layout */
@@ -147,7 +139,7 @@ nav {
 .main-header-search button[type="submit"] {
     position: absolute;
     right: 17px;
-    top: 147px;
+    top: 152px;
     background: white;
     border: none;
     z-index: 2;
@@ -163,22 +155,19 @@ nav {
     height: 50px;
     margin: 20px 0;
     color: white;
-    position: relative;
+    /*! position: relative; */
+    display: flex;
+    align-items: center;
 }
 
-.alert-banner p {
-    position: absolute;
-}
 
 #alert-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
+
     border: none;
     color: white;
     background: #5C5C8B;
     cursor: pointer;
-    padding: 15px;
+    margin-left: auto;
 }
 
 /* traffic nav */ 
@@ -234,13 +223,15 @@ h3 {
     height: 70px;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    /*! margin: 0 auto; */
+    align-self: center;
 }
 
 .twitter,
 .facebook,
 .google {
-
+    display: flex;
+    flex-direction: column;
     width: 30%;
     background: rgb(236, 234, 240);
     border: 1px solid rgb(231, 226, 236);
@@ -258,42 +249,18 @@ h3 {
     
 }
 
-/* members and activity */
-.members-container {
-    position: relative;
-}
-
-.members .members-text > p:nth-child(2){
-    position: absolute;
-    right: 30px;
-    top : -16px;
-}
-.members-container img {
-    width: 50px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 10px;
-}
-
-.members-text a {
-    text-decoration-line: none;
-}
-
-
-.members,
-.activity {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.activity .members-text p:nth-child(2) {
-    margin: 0 0;
-}
-
 .fa-greater-than {
     display: none;
 }
 
+.members-container img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.members, .activity {
+    text-align: center;
+}
 /* message user */
 
 .message,
@@ -301,6 +268,7 @@ h3 {
     width: 90%;
     margin: 0 auto;
 }
+
 
 .widget-container {
     display: flex;
@@ -403,6 +371,8 @@ h3 {
 .message, .settings {
     border-top: none;
 }
+
+
 /* ------------------------------------------------------------- @media queries----------------------------*/
 @media (min-width: 768px) {
     /* header layout */
@@ -420,13 +390,11 @@ h3 {
         grid-template-columns: 50%;
         margin: 0 0 0 10px;
     }
-    header {
-        display: flex;
-        flex-flow: row wrap;
-    }
+   
 
     header h1 {
         flex: 1;
+        margin-left: 20px;
     }
 
     /* navigation layout */
@@ -435,6 +403,10 @@ h3 {
         flex-direction: column;
         justify-content: flex-start;
         
+    }
+
+    .svg-nav:hover {
+        border-left: 5px solid rgb(45, 231, 45);
     }
 
     /* dashboard */
@@ -505,24 +477,47 @@ h3 {
     .facebook,
     .google {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
-    .social-image,
-    .social-text {
-        margin: auto;
+    .social-image{
+         margin-right: 1.5em;
     }
     /* members container */
+    
+    .members, .activity {
+    padding: 0 61.5px 0;
+    border: solid rgb(228, 221, 221) 1px;
+    border-left: transparent;
+    text-align: initial;
+    }
+
+    .members-container {
+        display: flex;
+        align-items: last baseline;
+    }
+
+    .members-container p {
+        margin-left: auto;
+        
+    }
 
     .fa-greater-than {
-        display: block;
-        position: absolute;
-        right: 30px;
-        top: -16px;
+        margin-left: auto;
         color: #5C5C8B;
+        align-self: initial;
+        display: block;
     }
     
     .settings {
         display:flex;
         flex-direction: column;
+        
+    }
+    .message, .settings {
+        padding: 0 61.5px 0;
+        border: solid  rgb(228, 221, 221) 1px;
+        border-left: transparent;
     }
 
     .settings-button {
@@ -537,10 +532,6 @@ h3 {
         border-bottom: 1px solid rgb(228, 221, 221);
         padding: 0 0 20px;
     }
-
-
-    
-
 
 }
 
