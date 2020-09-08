@@ -17,11 +17,8 @@ $(alertBanner).on("click", function(e) {
     }
 })
 
-
-
 $('.bell-svg').on('click', function() {
     $(alertBanner).show();
-    
 })
 /* traffic chart code */
 
@@ -70,7 +67,6 @@ let trafficOptions = {
     }
 };
 
-
 let traffic = new Chart(trafficChart, {
     
     type: 'line',
@@ -106,13 +102,10 @@ const dailyOptions = {
     }
 }
 
-
 const daily = new Chart(dailyChart, {
     type: 'bar',
     data: dailyData,
     options: dailyOptions
-        
-        
 });
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -129,8 +122,6 @@ const mobileData = {
                 '#51B6C8',
                 '#78CF82',
                 '#7477BF',
-                
-                
             ],
             borderWidth: 1
         }]
