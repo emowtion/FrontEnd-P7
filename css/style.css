@@ -370,6 +370,7 @@ h3 {
       justify-content: center;
     }
   }
+  
 @media (min-width: 1024px) {
     /* header layout */
     .grid-container {
