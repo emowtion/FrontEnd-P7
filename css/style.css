@@ -356,7 +356,21 @@ h3 {
 
 
 /* ------------------------------------------------------------- @media queries----------------------------*/
+
 @media (min-width: 768px) {
+    .social-container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .twitter,
+    .facebook,
+    .google {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+@media (min-width: 1024px) {
     /* header layout */
     .grid-container {
         grid-template-columns: 55px 1fr;
