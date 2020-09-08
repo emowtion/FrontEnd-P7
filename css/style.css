@@ -89,10 +89,10 @@ header .member-img {
     width: 45px;
     height: 45px;
     margin-right: 5px;
-   
-    
 }
-
+header h1 {
+    flex: 2 v;
+}
 /* navigation layout */
 
 nav {
